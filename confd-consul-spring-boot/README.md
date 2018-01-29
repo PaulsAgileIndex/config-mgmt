@@ -4,12 +4,12 @@
 The application is SpringBoot based but it is using the configuration management approach which one would be using in common JAVA applications. The application offers a REST interface which will print the properties known inside. confd is connecting to a Consul backend and is watching for key/value changes. The application itself and confd are running in one container as two seperate [services](src/main/docker/service/). Therefore I'm using the Docker base image from [phusion/baseimage](https://hub.docker.com/r/phusion/baseimage/)
 
 **Features**
-- [**SpringBoot**](https://projects.spring.io/spring-boot/)
-- Stage specific configuration 
-- [**confd**](https://github.com/kelseyhightower/confd) watching backend
-- [**Consul**](https://www.consul.io/) as backend
-- Custom property refresh
-- Application local properties could be overridden by global properties
+- [**SpringBoot**](https://github.com/PaulsAgileIndex/config-mgmt/blob/master/confd-consul-spring-boot/src/main/java/edu/avoodoo/configmgnt/example/ConfdExampleApp.java)
+- [Stage specific configuration](https://github.com/PaulsAgileIndex/config-mgmt/blob/master/confd-consul-spring-boot/buildAndRunDockerContainer.sh)
+- [**confd**](https://github.com/PaulsAgileIndex/config-mgmt/tree/master/confd-consul-spring-boot/src/main/docker/config/confd) watching backend
+- [**Consul**](https://github.com/PaulsAgileIndex/config-mgmt/blob/master/confd-consul-spring-boot/buildAndRunDockerContainer.sh) as backend
+- [REST based custom property refresh](https://github.com/PaulsAgileIndex/config-mgmt/blob/master/confd-consul-spring-boot/src/main/java/edu/avoodoo/configmgnt/example/rs/AppConfigRs.java)
+- Application local properties could be [overridden by global properties](https://github.com/PaulsAgileIndex/config-mgmt/blob/master/confd-consul-spring-boot/src/main/java/edu/avoodoo/configmgnt/example/config/AppConfig.java)
 
 
 ### Build and Run the application
