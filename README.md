@@ -25,7 +25,7 @@ Please feel free to ask me any question or to give me some feedback on it.
 
 
 ## Work Assignment
-Have fun...
+Have fun...!
 
 ## Remove unused images
 docker rmi -f $(docker images | grep "<none>" | awk "{print \$3}")
