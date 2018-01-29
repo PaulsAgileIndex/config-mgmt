@@ -17,7 +17,7 @@ The application is SpringBoot based but it is using the configuration management
 Executing the script [buildAndRunDockerContainer.sh](buildAndRunDockerContainer.sh) invokes a Maven build which creates the Docker image for the example application. It [Dockerfile](https://github.com/PaulsAgileIndex/config-mgmt/blob/master/confd-consul-spring-boot/Dockerfile) installes Java, cURL, confd and the example SpringBoot application as well some other utilities to the image - *...could be less in future iterations*.
 
 **Run**  
-The script also creates 5 container. The first one is a Consul container which holds the key/value pairs for every stage the application is deployed to. Therefore it leverages confd's prefix mechanism which utilizes Consul's hierarchical key/value storage. The remaining four containers are instances of the example application where each is depicting a stage from **dev**, **test**, **uat** to **prod**.
+The script also creates 5 containers. The first one is a Consul container which holds the key/value pairs for every stage the application is deployed to. Therefore it leverages confd's prefix mechanism which utilizes Consul's hierarchical key/value storage. The remaining four containers are instances of the example application where each is depicting a stage from **dev**, **test**, **uat** to **prod**.
 
 ### Integration Test
   1. For easy integration testing use POSTMAN [https://www.getpostman.com/](https://www.getpostman.com/)
