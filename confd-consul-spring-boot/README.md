@@ -38,7 +38,7 @@ To which stage the example application is deployed to is managed by ``-e"CONFD_P
 To see the life property change within the example application one could use Consul's UI provided under [localhost:Consol UI](http://localhost:8500/ui/#/dc1/kv/) to change some values.
 
 **POSTMAN**  
-For easy integration test one can use POSTMAN [https://www.getpostman.com/](https://www.getpostman.com/). The file [confd-example.postman_collection.json](https://github.com/PaulsAgileIndex/config-mgmt/blob/master/confd-consul-spring-boot/postman/confd-example.postman_collection.json) contains a collection of REST requests which could be executed against the deployed example application in its different stages. The stages use different ports for differentiation (dev:**8080**, test:**8081**, uat:**8082**, prod:**8083****).
+For easy integration test one can use POSTMAN [https://www.getpostman.com/](https://www.getpostman.com/). The file [confd-example.postman_collection.json](https://github.com/PaulsAgileIndex/config-mgmt/blob/master/confd-consul-spring-boot/postman/confd-example.postman_collection.json) contains a collection of REST requests which could be executed against the deployed example application in its different stages. The stages use different ports for differentiation (dev:**8080**, test:**8081**, uat:**8082**, prod:**8083**).
   
 Request for Stage *dev*  
 ```
