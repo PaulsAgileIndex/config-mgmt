@@ -3,8 +3,18 @@
 
 ![4631850](https://user-images.githubusercontent.com/4631850/35187372-4d18cdf8-fe23-11e7-8ebf-849d35070b8c.jpg)
 
+## Example Application *(confd, Consul, SpringBoot, Custom Properties)*
+The application is SpringBoot based but it is using the configuration management approach which one would be using in common JAVA applications. The application offers a REST interface which will print the properties known inside. confd is connecting to a Consul backend and is watching for key/value changes. The appication and confd are running in one container as two seperate services. Therefore I'm using the Docker base image from [phusion/baseimage](https://hub.docker.com/r/phusion/baseimage/)
+
+**Features**
+- SpringBoot application
+- Stage specific configuration 
+- confd with Consul backend
+- Custom property refresh
+
+
 ### Build and Run the application
-The apllication is 
+
 
 ### Integration Test
   1. For easy integration testing use POSTMAN [https://www.getpostman.com/](https://www.getpostman.com/)
