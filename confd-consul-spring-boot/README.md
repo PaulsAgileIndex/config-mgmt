@@ -5,12 +5,12 @@ The application is SpringBoot based but it is using the configuration management
 
 **Features**
 - [**SpringBoot**](https://github.com/PaulsAgileIndex/config-mgmt/blob/master/confd-consul-spring-boot/src/main/java/edu/avoodoo/configmgnt/example/ConfdExampleApp.java)
-- [Stage specific configuration](https://github.com/PaulsAgileIndex/config-mgmt/blob/master/confd-consul-spring-boot/buildAndRunDockerContainer.sh)
+- [**Stage specific** configuration](https://github.com/PaulsAgileIndex/config-mgmt/blob/master/confd-consul-spring-boot/buildAndRunDockerContainer.sh)
 - [**confd**](https://github.com/PaulsAgileIndex/config-mgmt/tree/master/confd-consul-spring-boot/src/main/docker/config/confd) watching backend
 - [**Consul**](https://github.com/PaulsAgileIndex/config-mgmt/blob/master/confd-consul-spring-boot/buildAndRunDockerContainer.sh) as backend
-- [REST based custom property refresh](https://github.com/PaulsAgileIndex/config-mgmt/blob/master/confd-consul-spring-boot/src/main/java/edu/avoodoo/configmgnt/example/rs/AppConfigRs.java)
+- [**REST** based custom property refresh](https://github.com/PaulsAgileIndex/config-mgmt/blob/master/confd-consul-spring-boot/src/main/java/edu/avoodoo/configmgnt/example/rs/AppConfigRs.java)
 - Application local properties could be [overridden by global properties](https://github.com/PaulsAgileIndex/config-mgmt/blob/master/confd-consul-spring-boot/src/main/java/edu/avoodoo/configmgnt/example/config/AppConfig.java)
-- [GLOBAL_CONFIG_HOME](https://github.com/PaulsAgileIndex/config-mgmt/blob/master/confd-consul-spring-boot/Dockerfile) defines the path to the *.properties* file where confd is writing to. 
+- [**GLOBAL_CONFIG_HOME**](https://github.com/PaulsAgileIndex/config-mgmt/blob/master/confd-consul-spring-boot/Dockerfile) defines the path to the *.properties* file where confd is writing to. 
 
 
 ### Build and Run the application
