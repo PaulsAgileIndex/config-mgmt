@@ -13,7 +13,7 @@ The application is SpringBoot based but it is using the configuration management
 
 
 ### Build and Run the application
-
+Executing the script [buildAndRunDockerContainer.sh](buildAndRunDockerContainer.sh) creates 5 container. The first is a Consul container which holds the key/value pairs for every stage the application is deployed to. The remaining 4 containers are instances of the example application which are depicting the stages dev, test, uat and prod.
 
 ### Integration Test
   1. For easy integration testing use POSTMAN [https://www.getpostman.com/](https://www.getpostman.com/)
