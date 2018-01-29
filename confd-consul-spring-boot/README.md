@@ -29,7 +29,7 @@ docker run
 --name=confd-consul-spring-boot-dev 
 --network=bridge avoodoo/confd-consul-spring-boot:1.0-SNAPSHOT
 ```
-To which stage the example application is deployed to is manages by ``-e"CONFD_PREFIX=dev"``. The backend node is given to the container via ``-e"CONSUL_NODE=172.17.0.1:8500"``. Multiple nodes could be provided comma separated. In my case the IP ``172.17.0.1`` is the IP from ``docker0``
+To which stage the example application is deployed to is managed by ``-e"CONFD_PREFIX=dev"``. The backend node is given to the container via ``-e"CONSUL_NODE=172.17.0.1:8500"``. Multiple nodes could be provided comma separated. In my case the IP ``172.17.0.1`` is the IP from ``docker0``
 
 ### Integration Test
   1. For easy integration testing use POSTMAN [https://www.getpostman.com/](https://www.getpostman.com/)
