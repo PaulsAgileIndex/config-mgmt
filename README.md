@@ -2,9 +2,9 @@
 
 ## Motivation
 
-So far everybody is aware that stage specific configuration properties (stages: local, dev, test, uat, prod) must reside outside the application. The application itself in agreement with the CI/CD principels should be built only once but run everywhere. This is to ensure that we are not comparing apples with bananas in other words that the same piece of software is passing the multiple quality gates on the way to production. 
+So far everybody is aware that stage specific configuration properties (stages: local, dev, test, uat, prod) must reside outside the application. The application itself in agreement with the CI/CD principles should be built only once but run everywhere. This is to ensure that we are not comparing apples with bananas in other words that the same piece of software is passing the multiple quality gates on the way to production. 
 
-In the past if seen multiple approaches for configuration management. The most of them results in problems or at least in huge effort maintaining stage specific configuration.  
+In the past I have seen multiple approaches for configuration management. The most of them results in problems or at least in huge effort maintaining stage specific configuration.  
 
 ### Some Bad Experiences  
  - **Bash Scripting**: The scripts where maintained from a developer holding the scripts locally on his shared drive. A new deployment (new components and configuration) took most of the time around half a day.
