@@ -1,6 +1,8 @@
 # config-mgmt
 
+## Example Applications
 
+Dockerized [confd Application](https://github.com/PaulsAgileIndex/config-mgmt/tree/master/confd-consul-spring-boot) (confd, Consul, SpringBoot, custom property mechanism)
 
 ## Motivation
 
