@@ -3,7 +3,7 @@
 
 ![4631850](https://user-images.githubusercontent.com/4631850/35187372-4d18cdf8-fe23-11e7-8ebf-849d35070b8c.jpg)
 
-### Prerequisite
+### Testing
   1. For easy integration testing use POSTMAN [https://www.getpostman.com/](https://www.getpostman.com/)
 
 
