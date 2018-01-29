@@ -13,7 +13,11 @@ In the past if seen multiple approaches for configuration management. The most o
  - **Un-/Repacking the Application**: An approach which works good at least in my experience but has some drawbacks. It also depends on inhouse scripting to replace the stage specific properties. Quality gates are passed not by the same piece of software.
 
 
-This repository contains a series of configuration management examples....
+This repository contains a series of configuration management examples which I'm using as blue prints for my own projects or at least to get some experience with the different technologies. 
+
+Please feel free to ask me any question or to give me some feedback on it.
+
+Have fun...
 
 
 
