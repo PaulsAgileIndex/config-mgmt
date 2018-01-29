@@ -52,34 +52,7 @@ Request for Stage *prod*
 curl http://localhost:8083/configmgmt/example/showConfig?reset=true -X GET
 ```
 
-
-### Run the Application from Eclipse
-
-  1. Add Lombok to Eclipse as described above
-  2. Navigate to ``edu.avoodoo.configmgnt.example.ConfdExampleApp``
-  3. Context menu: **``Run As``** -> **``Java Application``**
-
-
-### Run the Application from CLI
-
-  1. Navigate to ${project.basedir}
-  2. Execute **``mvn spring-boot:run``**
-
-
-### Integration Test with POSTMAN
-
- 1. Run the Application (SpringBoot)
- 2. Import to POSTMAN ``${project.basedir}/postman/confd-example.postman_collection.json`` 
- 3. Execute request ``reloadConfig`` or ``isAlive`` 
- 4. Check result
- 
-### Run the Container
-
-```
-docker run --name=confd-example-spring-boot --network=bridge -itd -p 8080:8080 -e"APPLICATION_STAGE=popoproduction" avoodoo/confd-example-spring-boot:1.0-SNAPSHOT
-```
- 
-### Useful Linux Commands
+### Useful Docker / Linux Commands
 
 **Remove Unused Images**  
 
