@@ -19,6 +19,18 @@ Executing the script [buildAndRunDockerContainer.sh](buildAndRunDockerContainer.
 **Run**  
 The [script](buildAndRunDockerContainer.sh) also creates 5 containers. The first one is a Consul container which holds the key/value pairs for every stage the application is deployed to. Therefore it leverages confd's prefix mechanism which utilizes Consul's hierarchical key/value storage. The remaining four containers are instances of the example application where each is depicting a stage from **dev**, **test**, **uat** to **prod**.
 
+To which stage the example application is deployed to is manages by ``-e"CONFD_PREFIX=dev"``. The backend node is given to the container via ``-e"CONSUL_NODE=172.17.0.1:8500"``. Multiple nodes could be provided comma separated. In my case the IP ``172.17.0.1`` is the IP from ``docker0``
+
+```
+docker run 
+-itd 
+-p 8080:8080 
+-e"CONFD_PREFIX=dev" 
+-e"CONSUL_NODE=172.17.0.1:8500" 
+--name=confd-consul-spring-boot-dev 
+--network=bridge avoodoo/confd-consul-spring-boot:1.0-SNAPSHOT
+```
+
 ### Integration Test
   1. For easy integration testing use POSTMAN [https://www.getpostman.com/](https://www.getpostman.com/)
 
