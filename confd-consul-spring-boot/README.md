@@ -4,10 +4,12 @@
 The application is SpringBoot based but it is using the configuration management approach which one would be using in common JAVA applications. The application offers a REST interface which will print the properties known inside. confd is connecting to a Consul backend and is watching for key/value changes. The application itself and confd are running in one container as two seperate [services](src/main/docker/service/). Therefore I'm using the Docker base image from [phusion/baseimage](https://hub.docker.com/r/phusion/baseimage/)
 
 **Features**
-- SpringBoot application
+- SpringBoot
 - Stage specific configuration 
-- confd with Consul backend
+- confd watching backend
+- Consul as backend
 - Custom property refresh
+- Application local properties could be overridden by global properties
 
 
 ### Build and Run the application
