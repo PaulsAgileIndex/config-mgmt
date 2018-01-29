@@ -20,9 +20,9 @@ In the past if seen multiple approaches for configuration management. The most o
 This repository contains a series of configuration management examples which I'm using as blue prints for my own projects or at least to get some experience with the different technologies.  
 I'm using Docker, confd, Consul, SpringBoot. I will use build-in capabilities as well as custom made implementations inside the different sub-repositories. 
 
-- Dockerized [Configuration Management Application](https://github.com/PaulsAgileIndex/config-mgmt/tree/master/confd-consul-spring-boot) (**confd** as template, Consul as backend, SpringBoot, custom property mechanism)
+- Dockerized [confd-consul-spring-boot](https://github.com/PaulsAgileIndex/config-mgmt/tree/master/confd-consul-spring-boot) application (**confd** as template, Consul as backend, SpringBoot, custom property mechanism)
 
-- Dockerized [Configuration Management Application](https://github.com/PaulsAgileIndex/config-mgmt/tree/master/consul-spring-boot) (**Consul** as template and backend provider, SpringBoot, Spring config mechanism)
+- Dockerized [consul-spring-boot](https://github.com/PaulsAgileIndex/config-mgmt/tree/master/consul-spring-boot) application (**Consul** as template and backend provider, SpringBoot, Spring config mechanism)
 
 
 ## Feedback
