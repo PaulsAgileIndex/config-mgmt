@@ -6,7 +6,7 @@ The application is SpringBoot based but it is using the configuration management
 **Features**
 - [**SpringBoot**](https://github.com/PaulsAgileIndex/config-mgmt/blob/master/confd-consul-spring-boot/src/main/java/edu/avoodoo/configmgnt/example/ConfdExampleApp.java)
 - [**Stage specific** configuration](https://github.com/PaulsAgileIndex/config-mgmt/blob/master/confd-consul-spring-boot/buildAndRunDockerContainer.sh)
-- [**confd**](https://github.com/PaulsAgileIndex/config-mgmt/tree/master/confd-consul-spring-boot/src/main/docker/config/confd) watching backend
+- [**confd**](https://github.com/PaulsAgileIndex/config-mgmt/blob/master/confd-consul-spring-boot/src/main/docker/service/confd/confd.sh) as a  service watching the backend (Consul)
 - [**Consul**](https://github.com/PaulsAgileIndex/config-mgmt/blob/master/confd-consul-spring-boot/buildAndRunDockerContainer.sh) as backend
 - [**REST** based custom property refresh](https://github.com/PaulsAgileIndex/config-mgmt/blob/master/confd-consul-spring-boot/src/main/java/edu/avoodoo/configmgnt/example/rs/AppConfigRs.java)
 - Application local properties could be [overridden by global properties](https://github.com/PaulsAgileIndex/config-mgmt/blob/master/confd-consul-spring-boot/src/main/java/edu/avoodoo/configmgnt/example/config/AppConfig.java)
