@@ -73,16 +73,4 @@ ENV ARTIFACT_FILE_EXTENSION=${ARTIFACT_FILE_EXTENSION}
 ADD target/${ARTIFACT_NAME}.${ARTIFACT_FILE_EXTENSION} $APPLICATION_HOME/$ARTIFACT_NAME.$ARTIFACT_FILE_EXTENSION
 COPY src/main/docker/service/startapp/start.sh /etc/service/startapp/run
 RUN chmod +x /etc/service/startapp/run		
-		
-		
-## Set some env vars		
-ENV MYAPP_DATABASE_URL=db.example.com
-ENV MYAPP_DATABASE_USER=rob		
-ENV SOME_SERVICE_IP=192.168.0.255
-
-
-##ADD src/main/docker/service/confd.service /etc/systemd/system/confd.service
-#ADD src/main/docker/script/start.sh $APPLICATION_HOME/start.sh
-#RUN chmod +x $APPLICATION_HOME/start.sh
-#CMD ./start.sh ${ARTIFACT}
 
