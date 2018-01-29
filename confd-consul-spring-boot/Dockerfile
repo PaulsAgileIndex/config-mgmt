@@ -63,7 +63,7 @@ RUN sed -i 's#<replace>#'"$APPLICATION_HOME"'#g'  $CONFD_TOML/global.config.prop
 COPY src/main/docker/service/confd/confd.sh /etc/service/confd/run
 RUN chmod +x /etc/service/confd/run		
 
-## Create Runit Service: confd-example (Java SpringBoot Application) 
+## Create Runit Service: confd-consul-spring-boot (Java SpringBoot Application) 
 ARG ARTIFACT_NAME
 ARG ARTIFACT_FILE_EXTENSION
 ##Using ARG alone means your variable is visible at build time, not at runtime.

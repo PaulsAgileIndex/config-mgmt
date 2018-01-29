@@ -32,7 +32,7 @@ cat << EOF
    ##                                                         ##
    ##  Building the Docker image for the application:         ##
    ##                                                         ##
-   ##  consul-spring-boot                              ##
+   ##  consul-spring-boot                                     ##
    ##                                                         ##
    #############################################################
 
@@ -88,7 +88,7 @@ cat << EOF
 	
    #############################################################
    ##                                                         ##
-   ##  Start application "consul-spring-boot"           ##
+   ##  Start application "consul-spring-boot"                 ##
    ##  for stages:                                            ##
    ##                                                         ##
    ##  dev  (8080)                                            ##

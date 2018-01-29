@@ -33,10 +33,18 @@ RUN unzip consul-template_${CONSUL_TEMPLATE_VERSION}_linux_amd64.zip && \
 	rm -rf consul-template_${CONSUL_TEMPLATE_VERSION}_linux_amd64.zip && \
 	mkdir -p /consul-template /consul-template/config.d /consul-template/templates
 
+ENV PATH="/opt/consul-template/bin:${PATH}"		
+	
+
+## Create Runit Service: consul-template
+COPY src/main/docker/service/consul/consul-template.sh /etc/service/consul-template/run
+RUN chmod +x /etc/service/consul-template/run		
+	
+
 ENV APPLICATION_HOME /opt/java/spring-boot/consul-example	
 WORKDIR $APPLICATION_HOME 		
 	
-## Create Runit Service: confd-example (Java SpringBoot Application)
+## Create Runit Service: consul-spring-boot (Java SpringBoot Application)
 ARG ARTIFACT_NAME
 ARG ARTIFACT_FILE_EXTENSION
 ##Using ARG alone means your variable is visible at build time, not at runtime.
