@@ -1,0 +1,10 @@
+[template]
+src = "global.config.properties.tmpl"
+dest = "<replace>/global.config.properties"
+keys = [
+    "/base/info/deployed/application",
+    "/base/info/deployed/stage",
+    "/app/important/service/ip",
+    "/app/important/db/url",
+    "/app/important/db/user"
+]

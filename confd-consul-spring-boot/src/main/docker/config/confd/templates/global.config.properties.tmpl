@@ -1,0 +1,40 @@
+
+	##########################################################
+	##                                                      ##
+	##    This property file will be set on                 ##
+	##    an environment path on the executing computer.    ##
+	##                                                      ##
+	##    The environment variable holding this path is     ##
+	##    specified by the local property:                  ##
+	##    'base.info.global.override.config.home.env'       ##
+	##                                                      ##
+	##    See also local file: 'config.properties'          ##
+	##                                                      ##
+	##    Target is to amend this file with 'confd'         ## 
+	##    for different stages with confd's "-prefix"       ##
+	##    option for (dev, test, uat, prod).                ##
+	##                                                      ##
+	##########################################################
+
+
+##########################################################
+##    Base info for application and                     ##
+##    configuration management                          ##
+##########################################################
+base.info.deployed.application={{getv "/base/info/deployed/application"}} (origin:confd)
+base.info.deployed.stage={{getv "/base/info/deployed/stage"}} (origin:confd)
+
+
+##########################################################
+##    Application Specific Properties: global (static)  ##
+##########################################################
+app.important.var3=globalVar3 (origin:confd)
+app.important.var4=globalVar4 (origin:confd)
+
+
+##########################################################
+##    Stage Specific Properties: confd                  ##
+##########################################################
+app.important.service.ip={{getv "/app/important/service/ip" "8.8.8.8"}} (origin:confd)
+app.important.db.url={{getv "/app/important/db/url"}} (origin:confd)
+app.important.db.user={{getv "/app/important/db/user"}} (origin:confd)

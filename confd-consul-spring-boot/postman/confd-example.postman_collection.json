@@ -1,0 +1,224 @@
+{
+	"info": {
+		"name": "confd-example",
+		"_postman_id": "59960e7a-3aae-4a30-7022-53a89e8d43bd",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "isalive",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"x\": 1000,\n    \"y\": 25\n}"
+				},
+				"url": {
+					"raw": "http://{{confd-example-spring-boot}}:8080/configmgmt/example/isalive",
+					"protocol": "http",
+					"host": [
+						"{{confd-example-spring-boot}}"
+					],
+					"port": "8080",
+					"path": [
+						"configmgmt",
+						"example",
+						"isalive"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reloadConfig",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"x\": 1000,\n    \"y\": 25\n}"
+				},
+				"url": {
+					"raw": "http://{{confd-example-spring-boot}}:8080/configmgmt/example/reloadConfig?reset=true",
+					"protocol": "http",
+					"host": [
+						"{{confd-example-spring-boot}}"
+					],
+					"port": "8080",
+					"path": [
+						"configmgmt",
+						"example",
+						"reloadConfig"
+					],
+					"query": [
+						{
+							"key": "reset",
+							"value": "true",
+							"equals": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "confd-example-spring-boot (dev)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"x\": 1000,\n    \"y\": 25\n}"
+				},
+				"url": {
+					"raw": "http://{{confd-example-spring-boot}}:8080/configmgmt/example/showConfig?reset=true",
+					"protocol": "http",
+					"host": [
+						"{{confd-example-spring-boot}}"
+					],
+					"port": "8080",
+					"path": [
+						"configmgmt",
+						"example",
+						"showConfig"
+					],
+					"query": [
+						{
+							"key": "reset",
+							"value": "true",
+							"equals": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "confd-example-spring-boot (test)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"x\": 1000,\n    \"y\": 25\n}"
+				},
+				"url": {
+					"raw": "http://{{confd-example-spring-boot}}:8081/configmgmt/example/showConfig?reset=true",
+					"protocol": "http",
+					"host": [
+						"{{confd-example-spring-boot}}"
+					],
+					"port": "8081",
+					"path": [
+						"configmgmt",
+						"example",
+						"showConfig"
+					],
+					"query": [
+						{
+							"key": "reset",
+							"value": "true",
+							"equals": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "confd-example-spring-boot (uat)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"x\": 1000,\n    \"y\": 25\n}"
+				},
+				"url": {
+					"raw": "http://{{confd-example-spring-boot}}:8082/configmgmt/example/showConfig?reset=true",
+					"protocol": "http",
+					"host": [
+						"{{confd-example-spring-boot}}"
+					],
+					"port": "8082",
+					"path": [
+						"configmgmt",
+						"example",
+						"showConfig"
+					],
+					"query": [
+						{
+							"key": "reset",
+							"value": "true",
+							"equals": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "confd-example-spring-boot (prod)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"x\": 1000,\n    \"y\": 25\n}"
+				},
+				"url": {
+					"raw": "http://{{confd-example-spring-boot}}:8083/configmgmt/example/showConfig?reset=true",
+					"protocol": "http",
+					"host": [
+						"{{confd-example-spring-boot}}"
+					],
+					"port": "8083",
+					"path": [
+						"configmgmt",
+						"example",
+						"showConfig"
+					],
+					"query": [
+						{
+							"key": "reset",
+							"value": "true",
+							"equals": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
