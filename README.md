@@ -34,4 +34,6 @@ Please feel free to ask me any question or to give me some feedback on it.
 Have fun...!
 
 ## Remove unused images
+```
 docker rmi -f $(docker images | grep "<none>" | awk "{print \$3}")
+```
