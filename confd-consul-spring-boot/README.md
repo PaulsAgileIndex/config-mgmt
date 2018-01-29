@@ -3,7 +3,7 @@
 
 ![4631850](https://user-images.githubusercontent.com/4631850/35187372-4d18cdf8-fe23-11e7-8ebf-849d35070b8c.jpg)
 
-So far everybody is aware that stage specific configuration properties (stages: local, dev, test, uat, prod) must reside outside the application. The application itself in agreement with the CI/CD principels should be built once but run everywhere.This means the same piece of software should be able to run in multiple environments (stages) and herewith pass multiple quality gates on its way to production.
+So far everybody is aware that stage specific configuration properties (stages: local, dev, test, uat, prod) must reside outside the application. The application itself in agreement with the CI/CD principels should be built only once but run everywhere. To ensure that we are not comparing apples with bananas this means that the same piece of software must pass multiple quality gates on its way to production. 
 
 
 
