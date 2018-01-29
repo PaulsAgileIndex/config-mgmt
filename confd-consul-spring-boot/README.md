@@ -34,14 +34,18 @@ To which stage the example application is deployed to is managed by ``-e"CONFD_P
 ### Integration Test
 **POSTMAN**  
 For easy integration test one can use POSTMAN [https://www.getpostman.com/](https://www.getpostman.com/). The file [confd-example.postman_collection.json](https://github.com/PaulsAgileIndex/config-mgmt/blob/master/confd-consul-spring-boot/postman/confd-example.postman_collection.json) contains a collection of REST calles which could be executed against the deployed example application in its different stages. The stages use different Ports for differentiation (dev:**8080**, test:**8081**, uat:**8082**, prod:**8083****)
+  
+Request for Stage *dev*  
 ```
 http://localhost:8080/configmgmt/example/showConfig?reset=true
 ```
 
 **cURL**  
-Not so pretty but possible is the usage of cURL with e.g.
+Not so pretty but possible is the usage of cURL.  
+  
+Request for Stage *prod*  
 ```
-curl http://localhost:8080/configmgmt/example/showConfig?reset=true -X GET
+curl http://localhost:8083/configmgmt/example/showConfig?reset=true -X GET
 ```
 
 
