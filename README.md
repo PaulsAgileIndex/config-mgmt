@@ -14,6 +14,7 @@ In the past if seen multiple approaches for configuration management. The most o
  - **Stage Specific Build**: One of my past project uses this technique where the configuration of each stage has to be known at build time (non CI/CD compliant). This results in one piece of software for every stage applied within the project.
  - **Wired Bash Scripting**: In one of my offshore experiences in a multi-million Dollar project they used multiple non-automated scripts. One of my colleague (the build master) executed it without any up-to-date documentation. Hopefully he hasn't messed up with his local bus driver so far. Building the software and bringing it to "dev" stage took around half a week (Build 2-3h / Deployment 2-3d).
  - **Un-/Repacking the Application**: An approach which works good at least in my experience but has some drawbacks. It also depends on inhouse scripting to replace the stage specific properties. Quality gates are passed not by the same piece of software.
+ - **None**: One other offshore experience (at its time one of Europe biggest projects) had not had the ability to be deployed to different stages. A development cycle took two weeks after that one guy copied the jars to the stage by hand and made changes locally on his Labtop (Grrrr). 
 
 
 ## Situation
