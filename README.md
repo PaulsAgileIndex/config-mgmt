@@ -19,7 +19,8 @@ In the past if seen multiple approaches for configuration management. The most o
 
 ## Situation
 
-This repository contains a series of configuration management examples which I'm using as blue prints for my own projects or at least to get some experience with the different technologies. 
+This repository contains a series of configuration management examples which I'm using as blue prints for my own projects or at least to get some experience with the different technologies.  
+I'm using Docker, confd, Consul, SpringBoot. I will use build-in capabilities as well as custom made implementations inside the different sub-repositories. 
 
 
 ## Feedback
