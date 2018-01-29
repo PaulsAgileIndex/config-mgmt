@@ -4,10 +4,10 @@
 The application is SpringBoot based but it is using the configuration management approach which one would be using in common JAVA applications. The application offers a REST interface which will print the properties known inside. confd is connecting to a Consul backend and is watching for key/value changes. The application itself and confd are running in one container as two seperate [services](src/main/docker/service/). Therefore I'm using the Docker base image from [phusion/baseimage](https://hub.docker.com/r/phusion/baseimage/)
 
 **Features**
-- **SpringBoot**
+- [**SpringBoot**](https://projects.spring.io/spring-boot/)
 - Stage specific configuration 
-- **confd** watching backend
-- **Consul** as backend
+- [**confd**](https://github.com/kelseyhightower/confd) watching backend
+- [**Consul**](https://www.consul.io/) as backend
 - Custom property refresh
 - Application local properties could be overridden by global properties
 
@@ -34,7 +34,7 @@ To which stage the example application is deployed to is managed by ``-e"CONFD_P
 ### Integration Test
 
 **Consul**  
-To see the life property change within the example application one could use Consul's UI provided under [Consol UI](http://localhost:8500/ui/#/dc1/kv/) to change some values.
+To see the life property change within the example application one could use Consul's UI provided under [localhost:Consol UI](http://localhost:8500/ui/#/dc1/kv/) to change some values.
 
 **POSTMAN**  
 For easy integration test one can use POSTMAN [https://www.getpostman.com/](https://www.getpostman.com/). The file [confd-example.postman_collection.json](https://github.com/PaulsAgileIndex/config-mgmt/blob/master/confd-consul-spring-boot/postman/confd-example.postman_collection.json) contains a collection of REST calles which could be executed against the deployed example application in its different stages. The stages use different Ports for differentiation (dev:**8080**, test:**8081**, uat:**8082**, prod:**8083****)
