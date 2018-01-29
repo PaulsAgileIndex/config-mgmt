@@ -3,7 +3,14 @@
 
 ![4631850](https://user-images.githubusercontent.com/4631850/35187372-4d18cdf8-fe23-11e7-8ebf-849d35070b8c.jpg)
 
-### Testing
+So far everybody is aware that stage specific configuration properties (stages: local, dev, test, uat, prod) must reside outside the application. The application in consence to CI/CD principels should be built once. The same piece of software should be able to run in multiple environments (stages).
+
+
+
+### Build and Run the application
+The apllication is 
+
+### Integration Test
   1. For easy integration testing use POSTMAN [https://www.getpostman.com/](https://www.getpostman.com/)
 
 
