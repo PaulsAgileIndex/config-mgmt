@@ -37,7 +37,7 @@ ENV PATH="/opt/consul-template/bin:${PATH}"
 	
 
 ## Create Runit Service: consul-template
-COPY src/main/docker/service/consul/consul-template.sh /etc/service/consul-template/run
+COPY src/main/docker/service/consul-template/consul-template.sh /etc/service/consul-template/run
 RUN chmod +x /etc/service/consul-template/run		
 	
 
