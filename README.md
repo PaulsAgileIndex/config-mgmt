@@ -1,9 +1,5 @@
 # config-mgmt
 
-## Example Applications
-
-Dockerized [confd Application](https://github.com/PaulsAgileIndex/config-mgmt/tree/master/confd-consul-spring-boot) (confd, Consul, SpringBoot, custom property mechanism)
-
 ## Motivation
 
 So far everybody is aware that stage specific configuration properties (stages: local, dev, test, uat, prod) must reside outside the application. The application itself in agreement with the CI/CD principels should be built only once but run everywhere. This is to ensure that we are not comparing apples with bananas in other words that the same piece of software is passing the multiple quality gates on the way to production. 
@@ -23,6 +19,8 @@ In the past if seen multiple approaches for configuration management. The most o
 
 This repository contains a series of configuration management examples which I'm using as blue prints for my own projects or at least to get some experience with the different technologies.  
 I'm using Docker, confd, Consul, SpringBoot. I will use build-in capabilities as well as custom made implementations inside the different sub-repositories. 
+
+- Dockerized [confd Application](https://github.com/PaulsAgileIndex/config-mgmt/tree/master/confd-consul-spring-boot) (confd, Consul, SpringBoot, custom property mechanism)
 
 
 ## Feedback
