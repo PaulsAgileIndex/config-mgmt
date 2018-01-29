@@ -32,7 +32,17 @@ docker run
 To which stage the example application is deployed to is managed by ``-e"CONFD_PREFIX=dev"``. The backend node is given to the container via ``-e"CONSUL_NODE=172.17.0.1:8500"``. Multiple nodes could be provided comma separated. In my case the IP ``172.17.0.1`` is the IP from ``docker0``
 
 ### Integration Test
-  1. For easy integration testing use POSTMAN [https://www.getpostman.com/](https://www.getpostman.com/)
+**POSTMAN**  
+For easy integration test one can use POSTMAN [https://www.getpostman.com/](https://www.getpostman.com/). The file [confd-example.postman_collection.json](https://github.com/PaulsAgileIndex/config-mgmt/blob/master/confd-consul-spring-boot/postman/confd-example.postman_collection.json) contains a collection of REST calles which could be executed against the deployed example application in its different stages.
+```
+http://localhost:8080/configmgmt/example/showConfig?reset=true
+```
+
+**cURL**  
+Not so pretty but possible is the usage of cURL with e.g.
+```
+curl http://localhost:8080/configmgmt/example/showConfig?reset=true -X GET
+```
 
 
 ### Run the Application from Eclipse
