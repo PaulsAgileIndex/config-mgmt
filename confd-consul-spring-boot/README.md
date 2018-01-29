@@ -1,7 +1,7 @@
 # confd-consul-spring-boot
 
 ## Example Application
-The application is SpringBoot based but it is using the configuration management approach which one would be using in common JAVA applications. The application offers a REST interface which will print the properties known inside. confd is connecting to a Consul backend and is watching for key/value changes. The application itself and confd are running in one container as two seperate [services](src/main/docker/service/). Therefore I'm using the Docker base image from [phusion/baseimage](https://hub.docker.com/r/phusion/baseimage/)
+The application is SpringBoot based but it is using the configuration management approach which one would be using in common JAVA applications. The application offers a REST interface which will print the properties known inside. confd is connecting to a Consul backend and is watching for key/value changes. The application itself and confd are running in one container as two seperate [services](src/main/docker/service/). Therefore I'm using the Docker base image from [phusion/baseimage](https://hub.docker.com/r/phusion/baseimage/).
 
 **Features**
 - [**SpringBoot**](https://github.com/PaulsAgileIndex/config-mgmt/blob/master/confd-consul-spring-boot/src/main/java/edu/avoodoo/configmgnt/example/ConfdExampleApp.java)
@@ -18,7 +18,7 @@ The application is SpringBoot based but it is using the configuration management
 Executing the script [buildAndRunDockerContainer.sh](buildAndRunDockerContainer.sh) invokes a Maven build which creates the Docker image for the example application. The [Dockerfile](https://github.com/PaulsAgileIndex/config-mgmt/blob/master/confd-consul-spring-boot/Dockerfile) installes Java, cURL, confd and the example SpringBoot application as well some other utilities to the image - *...could be less in future iterations*.
 
 **Run**  
-The [script](buildAndRunDockerContainer.sh) also creates 5 containers. The first one is a Consul container which holds the key/value pairs for every stage the application is deployed to. Therefore it leverages confd's prefix mechanism which utilizes Consul's hierarchical key/value storage. The remaining four containers are instances of the example application where each is depicting a stage from **dev**, **test**, **uat** to **prod**.  
+The [script](buildAndRunDockerContainer.sh) also creates five containers. The first one is a Consul container which holds the key/value pairs for every stage the application is deployed to. Therefore it leverages confd's prefix mechanism which utilizes Consul's hierarchical key/value storage. The remaining four containers are instances of the example application where each is depicting a stage from **dev**, **test**, **uat** to **prod**.  
 
 Part of [buildAndRunDockerContainer.sh](buildAndRunDockerContainer.sh)
 ```
@@ -38,7 +38,7 @@ To which stage the example application is deployed to is managed by ``-e"CONFD_P
 To see the life property change within the example application one could use Consul's UI provided under [localhost:Consol UI](http://localhost:8500/ui/#/dc1/kv/) to change some values.
 
 **POSTMAN**  
-For easy integration test one can use POSTMAN [https://www.getpostman.com/](https://www.getpostman.com/). The file [confd-example.postman_collection.json](https://github.com/PaulsAgileIndex/config-mgmt/blob/master/confd-consul-spring-boot/postman/confd-example.postman_collection.json) contains a collection of REST calles which could be executed against the deployed example application in its different stages. The stages use different Ports for differentiation (dev:**8080**, test:**8081**, uat:**8082**, prod:**8083****)
+For easy integration test one can use POSTMAN [https://www.getpostman.com/](https://www.getpostman.com/). The file [confd-example.postman_collection.json](https://github.com/PaulsAgileIndex/config-mgmt/blob/master/confd-consul-spring-boot/postman/confd-example.postman_collection.json) contains a collection of REST requests which could be executed against the deployed example application in its different stages. The stages use different ports for differentiation (dev:**8080**, test:**8081**, uat:**8082**, prod:**8083**).
   
 Request for Stage *dev*  
 ```
