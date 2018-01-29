@@ -8,7 +8,7 @@ So far everybody is aware that stage specific configuration properties (stages: 
 
 In the past if seen multiple approaches for configuration management. The most of them results in problems or at least in huge effort maintaining stage specific configuration.  
 
-### Examples of approaches seen so far
+### Examples of Approaches Seen So Far
 
  - **Bash Scripting**: The scripts where maintained from a developer holding the scripts locally on his shared drive. A new deployment (new components and configuration) took most of the time around half a day.
  - **Stage Specific Build**: One of my past project uses this technique where the configuration of each stage has to be known at build time (non CI/CD compliant). This results in one piece of software for every stage applied within the project.
