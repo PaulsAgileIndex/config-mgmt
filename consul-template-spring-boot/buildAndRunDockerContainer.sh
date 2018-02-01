@@ -58,30 +58,37 @@ cat << EOF
 
 EOF
 ## Stage: dev
+curl -X PUT -d 'init-dev' http://localhost:8500/v1/kv/dev/reload
 curl -X PUT -d 'Configuration Management Blueprint (dev)' http://localhost:8500/v1/kv/dev/base/info/deployed/application
 curl -X PUT -d 'dev' http://localhost:8500/v1/kv/dev/base/info/deployed/stage
 curl -X PUT -d '1.1.1.1' http://localhost:8500/v1/kv/dev/app/important/service/ip
 curl -X PUT -d 'www.somewhere.com/consul-template/dev' http://localhost:8500/v1/kv/dev/app/important/db/url
 curl -X PUT -d 'frank@dev' http://localhost:8500/v1/kv/dev/app/important/db/user
+#20180201174409
 ## Stage: test
+curl -X PUT -d 'init-test' http://localhost:8500/v1/kv/test/reload
 curl -X PUT -d 'Configuration Management Blueprint (test)' http://localhost:8500/v1/kv/test/base/info/deployed/application
 curl -X PUT -d 'test' http://localhost:8500/v1/kv/test/base/info/deployed/stage
 curl -X PUT -d '2.2.2.2' http://localhost:8500/v1/kv/test/app/important/service/ip
 curl -X PUT -d 'www.somewhere.com/consul-template/test' http://localhost:8500/v1/kv/test/app/important/db/url
 curl -X PUT -d 'frank@test' http://localhost:8500/v1/kv/test/app/important/db/user
+#test-dev
 ## Stage: uat
+curl -X PUT -d 'init-uat' http://localhost:8500/v1/kv/uat/reload
 curl -X PUT -d 'Configuration Management Blueprint (uat)' http://localhost:8500/v1/kv/uat/base/info/deployed/application
 curl -X PUT -d 'uat' http://localhost:8500/v1/kv/uat/base/info/deployed/stage
 curl -X PUT -d '3.3.3.3' http://localhost:8500/v1/kv/uat/app/important/service/ip
 curl -X PUT -d 'www.somewhere.com/consul-template/uat' http://localhost:8500/v1/kv/uat/app/important/db/url
 curl -X PUT -d 'frank@uat' http://localhost:8500/v1/kv/uat/app/important/db/user
+#20180201174413
 ## Stage: prod
+curl -X PUT -d 'init-prod' http://localhost:8500/v1/kv/prod/reload
 curl -X PUT -d 'Configuration Management Blueprint (prod)' http://localhost:8500/v1/kv/prod/base/info/deployed/application
 curl -X PUT -d 'prod' http://localhost:8500/v1/kv/prod/base/info/deployed/stage
 curl -X PUT -d '4.4.4.4' http://localhost:8500/v1/kv/prod/app/important/service/ip
 curl -X PUT -d 'www.somewhere.com/consul-template/prod' http://localhost:8500/v1/kv/prod/app/important/db/url
 curl -X PUT -d 'frank@prod' http://localhost:8500/v1/kv/prod/app/important/db/user
-
+#20180201174415
 
 cat << EOF
 

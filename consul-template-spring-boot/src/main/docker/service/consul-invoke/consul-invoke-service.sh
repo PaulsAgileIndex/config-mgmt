@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -x
 
 
 ## http://kchard.github.io/runit-quickstart/
@@ -8,8 +8,9 @@ do
 	file=$GLOBAL_CONFIG_HOME
 	if  [ ! -s "$file" ]; then 
     	echo "file does not exist, or is empty!" >>/var/log/consul-invoke.log 2>&1 
+    	
     	now=$(date "+%Y%m%d%H%M%S") 
-    	curl -X PUT -d $now http://$CONSUL_NODE/v1/kv/$STAGE/reload
+    	curl -X PUT -d "--- $now ---" http://$CONSUL_NODE/v1/kv/$STAGE/reload
  	else
     	sleep 10s
  	fi 	
