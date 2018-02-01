@@ -1,0 +1,3 @@
+#!/bin/bash
+
+exec java -jar $APPLICATION_HOME/$ARTIFACT_NAME.$ARTIFACT_FILE_EXTENSION >>/var/log/${ARTIFACT_NAME}.log 2>&1
