@@ -61,25 +61,25 @@ EOF
 curl -X PUT -d 'Configuration Management Blueprint (dev)' http://localhost:8500/v1/kv/dev/base/info/deployed/application
 curl -X PUT -d 'dev' http://localhost:8500/v1/kv/dev/base/info/deployed/stage
 curl -X PUT -d '1.1.1.1' http://localhost:8500/v1/kv/dev/app/important/service/ip
-curl -X PUT -d 'www.somewhere.com/confd/dev' http://localhost:8500/v1/kv/dev/app/important/db/url
+curl -X PUT -d 'www.somewhere.com/consul-template/dev' http://localhost:8500/v1/kv/dev/app/important/db/url
 curl -X PUT -d 'frank@dev' http://localhost:8500/v1/kv/dev/app/important/db/user
 ## Stage: test
 curl -X PUT -d 'Configuration Management Blueprint (test)' http://localhost:8500/v1/kv/test/base/info/deployed/application
 curl -X PUT -d 'test' http://localhost:8500/v1/kv/test/base/info/deployed/stage
 curl -X PUT -d '2.2.2.2' http://localhost:8500/v1/kv/test/app/important/service/ip
-curl -X PUT -d 'www.somewhere.com/confd/test' http://localhost:8500/v1/kv/test/app/important/db/url
+curl -X PUT -d 'www.somewhere.com/consul-template/test' http://localhost:8500/v1/kv/test/app/important/db/url
 curl -X PUT -d 'frank@test' http://localhost:8500/v1/kv/test/app/important/db/user
 ## Stage: uat
 curl -X PUT -d 'Configuration Management Blueprint (uat)' http://localhost:8500/v1/kv/uat/base/info/deployed/application
 curl -X PUT -d 'uat' http://localhost:8500/v1/kv/uat/base/info/deployed/stage
 curl -X PUT -d '3.3.3.3' http://localhost:8500/v1/kv/uat/app/important/service/ip
-curl -X PUT -d 'www.somewhere.com/confd/uat' http://localhost:8500/v1/kv/uat/app/important/db/url
+curl -X PUT -d 'www.somewhere.com/consul-template/uat' http://localhost:8500/v1/kv/uat/app/important/db/url
 curl -X PUT -d 'frank@uat' http://localhost:8500/v1/kv/uat/app/important/db/user
 ## Stage: prod
 curl -X PUT -d 'Configuration Management Blueprint (prod)' http://localhost:8500/v1/kv/prod/base/info/deployed/application
 curl -X PUT -d 'prod' http://localhost:8500/v1/kv/prod/base/info/deployed/stage
 curl -X PUT -d '4.4.4.4' http://localhost:8500/v1/kv/prod/app/important/service/ip
-curl -X PUT -d 'www.somewhere.com/confd/prod' http://localhost:8500/v1/kv/prod/app/important/db/url
+curl -X PUT -d 'www.somewhere.com/consul-template/prod' http://localhost:8500/v1/kv/prod/app/important/db/url
 curl -X PUT -d 'frank@prod' http://localhost:8500/v1/kv/prod/app/important/db/user
 
 
@@ -103,25 +103,25 @@ EOF
 ## Stage: dev
 docker kill consul-spring-boot-dev
 docker rm consul-spring-boot-dev
-docker run -itd -p 8080:8080 -e"CONFD_PREFIX=dev" -e"CONSUL_NODE=172.17.0.1:8500" --name=consul-spring-boot-dev --network=bridge avoodoo/consul-spring-boot:1.0-SNAPSHOT
-# Stage: test
-#docker kill consul-spring-boot-test
-#docker rm consul-spring-boot-test
-#docker run -itd -p 8081:8080 -e"CONFD_PREFIX=test" -e"CONSUL_NODE=172.17.0.1:8500" --name=consul-spring-boot-test --network=bridge avoodoo/consul-spring-boot:1.0-SNAPSHOT
-# Stage: uat
-#docker kill consul-spring-boot-uat
-#docker rm consul-spring-boot-uat
-#docker run -itd -p 8082:8080 -e"CONFD_PREFIX=uat" -e"CONSUL_NODE=172.17.0.1:8500" --name=consul-spring-boot-uat --network=bridge avoodoo/consul-spring-boot:1.0-SNAPSHOT
-# Stage: prod
-#docker kill consul-spring-boot-prod
-#docker rm consul-spring-boot-prod
-#docker run -itd -p 8083:8080 -e"CONFD_PREFIX=prod" -e"CONSUL_NODE=172.17.0.1:8500" --name=consul-spring-boot-prod --network=bridge avoodoo/consul-spring-boot:1.0-SNAPSHOT
+docker run -dit -p 8080:8080 -e"STAGE=dev" -e"CONSUL_NODE=172.17.0.1:8500" --name=consul-spring-boot-dev --network=bridge avoodoo/consul-spring-boot:1.0-SNAPSHOT
+## Stage: test
+docker kill consul-spring-boot-test
+docker rm consul-spring-boot-test
+docker run -itd -p 8081:8080 -e"STAGE=test" -e"CONSUL_NODE=172.17.0.1:8500" --name=consul-spring-boot-test --network=bridge avoodoo/consul-spring-boot:1.0-SNAPSHOT
+## Stage: uat
+docker kill consul-spring-boot-uat
+docker rm consul-spring-boot-uat
+docker run -itd -p 8082:8080 -e"STAGE=uat" -e"CONSUL_NODE=172.17.0.1:8500" --name=consul-spring-boot-uat --network=bridge avoodoo/consul-spring-boot:1.0-SNAPSHOT
+## Stage: prod
+docker kill consul-spring-boot-prod
+docker rm consul-spring-boot-prod
+docker run -itd -p 8083:8080 -e"STAGE=prod" -e"CONSUL_NODE=172.17.0.1:8500" --name=consul-spring-boot-prod --network=bridge avoodoo/consul-spring-boot:1.0-SNAPSHOT
 
 cat << EOF
 
 	
    #############################################################
-   ##                                                         ##ch
+   ##                                                         ##
    ##  Let Docker some time to start the container before     ##
    ##  testing with e.g. POSTMAN                              ##
    ##                                                         ##
@@ -140,7 +140,7 @@ cat << EOF
    #############################################################
 
 EOF
-#sleep 30s
+sleep 30s
 cat << EOF
 
 	
@@ -153,4 +153,6 @@ cat << EOF
 EOF
 
 docker ps
+
+docker exec -it consul-spring-boot-dev bash
 
