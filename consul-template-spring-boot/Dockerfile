@@ -45,8 +45,8 @@ ADD target/${ARTIFACT_NAME}.${ARTIFACT_FILE_EXTENSION} $SPRING_BOOT_HOME/$ARTIFA
 
 
 ## Add the template for consul-template
-ENV TEMPLATE=$SPRING_BOOT_HOME/config/tmpl/global.application.properties.tpl
-ADD src/main/docker/config/consul-template/templates/global.application.properties.tpl $TEMPLATE
+ENV TEMPLATE=$SPRING_BOOT_HOME/config/tmpl/application-stage.properties.tpl
+ADD src/main/docker/config/consul-template/templates/application-stage.properties.tpl $TEMPLATE
 
 
 ## Start consul-template and start/supervise the SpringBoot application

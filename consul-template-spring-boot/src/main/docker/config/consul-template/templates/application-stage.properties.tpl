@@ -1,5 +1,4 @@
 ## {{ $prefix := (env "STAGE") }}
-## {{ key (print $prefix "/reload") }}
 
 	##########################################################
 	##    Template Mechanism:                               ##
