@@ -1,22 +1,26 @@
 #!/bin/bash -x
 
-export CONSUL_HOST_VOLUME=/var/data/consul/data
 cat << EOF
 
    #############################################################
    ##                                                         ##
+   ##  In the current version I do NOT use volumes for        ##
+   ##  Consul Server.                                         ##
+   ##                                                         ##
    ##  I'm using a local volume for Consul which brings       ##
    ##  problems during restart.                               ##                         
-   ##  "$CONSUL_HOST_VOLUME/raft/peers.json" has to be      ##
+   ##  "$CONSUL_HOST_VOLUME/raft/peers.json" has to be        ##
    ##  deleted on Consul restart (re-elect Quorum)!           ##
    ##  https://www.consul.io/docs/guides/outage.html          ##
    ##                                                         ##
    #############################################################
 	
 EOF
+
 docker kill consul
 docker rm consul
 ## With a volume created on your local machine (host)
+#export CONSUL_HOST_VOLUME=/var/data/consul/data
 #mkdir -p $CONSUL_HOST_VOLUME
 #rm -f $CONSUL_HOST_VOLUME/raft/peers.json
 #docker run --name=consul --network=bridge -itd -p 8400:8400 -p 8500:8500 -p 8600:53/udp -v $CONSUL_HOST_VOLUME:/data -h node1 progrium/consul -server -bootstrap -ui-dir /ui
@@ -91,7 +95,7 @@ cat << EOF
 	
    #############################################################
    ##                                                         ##
-   ##  Start application "consul-spring-boot"                 ##
+   ##  Start application "consul-template-spring-boot"        ##
    ##  for stages:                                            ##
    ##                                                         ##
    ##  dev  (8080)                                            ##
