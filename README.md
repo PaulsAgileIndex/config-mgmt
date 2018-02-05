@@ -22,7 +22,7 @@ I'm using Docker, confd, Consul, SpringBoot. I will use build-in capabilities as
 
 - Dockerized [confd-consul-spring-boot](https://github.com/PaulsAgileIndex/config-mgmt/tree/master/confd-consul-spring-boot) application (**confd** as template, Consul as backend, SpringBoot, custom property mechanism)
 
-- Dockerized [consul-template-spring-boot](https://github.com/PaulsAgileIndex/config-mgmt/tree/master/consul-spring-boot) application (**Consul** as template and backend provider, SpringBoot, Spring config mechanism)
+- Dockerized [consul-template-spring-boot](https://github.com/PaulsAgileIndex/config-mgmt/tree/master/consul-template-spring-boot) application (**Consul** as template and backend provider, SpringBoot, Spring config mechanism)
 
 
 ## Feedback
