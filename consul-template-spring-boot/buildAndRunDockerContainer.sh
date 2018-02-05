@@ -114,15 +114,15 @@ docker run -dit -p 8080:8080 -e"STAGE=dev" -e"CONSUL_NODE=172.17.0.1:8500" --nam
 ## Stage: test
 docker kill consul-template-spring-boot-test
 docker rm consul-template-spring-boot-test
-docker run -itd -p 8081:8080 -e"STAGE=test" -e"CONSUL_NODE=172.17.0.1:8500" --name=consul-template-spring-boot-test --network=bridge avoodoo/consul-template-spring-boot:1.0-SNAPSHOT
+#docker run -itd -p 8081:8080 -e"STAGE=test" -e"CONSUL_NODE=172.17.0.1:8500" --name=consul-template-spring-boot-test --network=bridge avoodoo/consul-template-spring-boot:1.0-SNAPSHOT
 ## Stage: uat
 docker kill consul-template-spring-boot-uat
 docker rm consul-template-spring-boot-uat
-docker run -itd -p 8082:8080 -e"STAGE=uat" -e"CONSUL_NODE=172.17.0.1:8500" --name=consul-template-spring-boot-uat --network=bridge avoodoo/consul-template-spring-boot:1.0-SNAPSHOT
+#docker run -itd -p 8082:8080 -e"STAGE=uat" -e"CONSUL_NODE=172.17.0.1:8500" --name=consul-template-spring-boot-uat --network=bridge avoodoo/consul-template-spring-boot:1.0-SNAPSHOT
 ## Stage: prod
 docker kill consul-template-spring-boot-prod
 docker rm consul-template-spring-boot-prod
-docker run -itd -p 8083:8080 -e"STAGE=prod" -e"CONSUL_NODE=172.17.0.1:8500" --name=consul-template-spring-boot-prod --network=bridge avoodoo/consul-template-spring-boot:1.0-SNAPSHOT
+#docker run -itd -p 8083:8080 -e"STAGE=prod" -e"CONSUL_NODE=172.17.0.1:8500" --name=consul-template-spring-boot-prod --network=bridge avoodoo/consul-template-spring-boot:1.0-SNAPSHOT
 
 cat << EOF
 
@@ -148,7 +148,7 @@ cat << EOF
 
 EOF
 
-sleep 30s
+#sleep 30s
 
 cat << EOF
 
@@ -163,5 +163,5 @@ EOF
 
 docker ps
 
-docker exec -it consul-template-spring-boot-prod bash
+docker exec -it consul-template-spring-boot-dev bash
 
