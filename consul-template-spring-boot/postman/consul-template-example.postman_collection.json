@@ -1,0 +1,250 @@
+{
+	"info": {
+		"name": "consul-template-example",
+		"_postman_id": "1c0fd34e-fe68-45a8-4eae-cec0c56a4b79",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "isalive (dev)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"x\": 1000,\n    \"y\": 25\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/configmgmt/example/isalive",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"configmgmt",
+						"example",
+						"isalive"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "isalive (test)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"x\": 1000,\n    \"y\": 25\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8081/configmgmt/example/isalive",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"configmgmt",
+						"example",
+						"isalive"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "isalive (uat)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"x\": 1000,\n    \"y\": 25\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8082/configmgmt/example/isalive",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"configmgmt",
+						"example",
+						"isalive"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "isalive (prod)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"x\": 1000,\n    \"y\": 25\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8083/configmgmt/example/isalive",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"configmgmt",
+						"example",
+						"isalive"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "confd-example-spring-boot (dev)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"x\": 1000,\n    \"y\": 25\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/configmgmt/example/showConfig",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"configmgmt",
+						"example",
+						"showConfig"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "confd-example-spring-boot (test)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"x\": 1000,\n    \"y\": 25\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8081/configmgmt/example/showConfig",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"configmgmt",
+						"example",
+						"showConfig"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "confd-example-spring-boot (uat)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"x\": 1000,\n    \"y\": 25\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8082/configmgmt/example/showConfig",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"configmgmt",
+						"example",
+						"showConfig"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "confd-example-spring-boot (prod)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"x\": 1000,\n    \"y\": 25\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8083/configmgmt/example/showConfig",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"configmgmt",
+						"example",
+						"showConfig"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
