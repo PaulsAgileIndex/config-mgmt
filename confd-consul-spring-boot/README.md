@@ -55,6 +55,12 @@ curl http://localhost:8083/configmgmt/example/showConfig?reset=true -X GET
 
 ### Useful Docker / Linux Commands
 
+**Remove Unused Container**  
+
+```
+docker ps --filter "status=exited" | grep 'weeks ago' | awk '{print $1}' | xargs --no-run-if-empty docker rm
+```
+
 **Remove Unused Images**  
 
 ```
